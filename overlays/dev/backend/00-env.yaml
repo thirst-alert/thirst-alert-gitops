@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: ta-backend
+spec:
+  template:
+    spec:
+      containers:
+      - name: backend
+        env:
+        - name: NODE_ENV
+          value: "dev"
+        - name: ERR_VERBOSE
+          value: "true"
+        - name: MONGO_URI
+          valueFrom:
+            secretKeyRef:
+              name: be-secrets
+              key: MONGO_URI
