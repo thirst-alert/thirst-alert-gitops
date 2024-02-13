@@ -7,3 +7,14 @@ images:
   newTag: v1.2.0-dev.8
 patches:
 - path: 00-env.yaml
+- target:
+    kind: Ingress
+    name: api-ingress
+    namespace: ta-backend
+  patch: |-
+    - op: replace
+      path: /spec/tls/0/hosts/0
+      value: api.dev.thirst-alert.com
+    - op: replace
+      path: /spec/rules/0/host
+      value: api.dev.thirst-alert.com
