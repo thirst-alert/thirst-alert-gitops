@@ -18,3 +18,8 @@ spec:
             secretKeyRef:
               name: be-secrets
               key: MONGO_URI
+        - name: JWT_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: be-secrets
+              key: JWT_SECRET
