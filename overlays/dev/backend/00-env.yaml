@@ -23,3 +23,8 @@ spec:
             secretKeyRef:
               name: be-secrets
               key: JWT_SECRET
+        - name: MAILER_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: be-secrets
+              key: MAILER_PASSWORD
