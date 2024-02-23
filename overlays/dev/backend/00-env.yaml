@@ -23,8 +23,23 @@ spec:
             secretKeyRef:
               name: be-secrets
               key: JWT_SECRET
-        - name: MAILER_PASSWORD
+        - name: MAILER_CLIENT_ID
           valueFrom:
             secretKeyRef:
               name: be-secrets
-              key: MAILER_PASSWORD
+              key: MAILER_CLIENT_ID
+        - name: MAILER_CLIENT_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: be-secrets
+              key: MAILER_CLIENT_SECRET
+        - name: MAILER_REFRESH_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: be-secrets
+              key: MAILER_REFRESH_TOKEN
+        - name: MAILER_ACCESS_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: be-secrets
+              key: MAILER_ACCESS_TOKEN
