@@ -4,7 +4,7 @@ resources:
 - ../../../base/backend
 images:
 - name: europe-west1-docker.pkg.dev/thirst-alert-app/thirst-alert-be/backend
-  newTag: v1.3.0-dev.2
+  newTag: v1.3.0-dev.3
 - name: europe-west1-docker.pkg.dev/thirst-alert/thirst-alert-be/backend
   newTag: v1.3.0-dev.3
 patches:
