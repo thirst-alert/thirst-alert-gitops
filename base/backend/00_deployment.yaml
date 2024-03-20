@@ -17,6 +17,6 @@ spec:
         app: backend
     spec:
       containers:
-      - image: europe-west1-docker.pkg.dev/thirst-alert/thirst-alert-be/backend
+      - image: europe-west1-docker.pkg.dev/thirst-alert-app/thirst-alert-be/backend
         name: backend
         resources: {}
