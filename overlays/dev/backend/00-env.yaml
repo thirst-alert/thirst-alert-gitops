@@ -13,6 +13,8 @@ spec:
           value: "dev"
         - name: ERR_VERBOSE
           value: "true"
+        - name: GCS_SENSOR_BUCKET
+          value: thirst-alert-sensor-images
         - name: MONGO_URI
           valueFrom:
             secretKeyRef:
@@ -43,3 +45,8 @@ spec:
             secretKeyRef:
               name: be-secrets
               key: MAILER_ACCESS_TOKEN
+        - name: GCS_CREDENTIALS
+          valueFrom:
+            secretKeyRef:
+              name: be-secrets
+              key: GCS_CREDENTIALS
