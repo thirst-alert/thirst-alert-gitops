@@ -15,6 +15,8 @@ spec:
           value: "true"
         - name: GCS_SENSOR_BUCKET
           value: thirst-alert-sensor-images
+        - name: BASE_URL
+          value: https://api.dev.thirst-alert.com
         - name: MONGO_URI
           valueFrom:
             secretKeyRef:
